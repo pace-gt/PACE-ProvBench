@@ -1,0 +1,12 @@
+[Application]
+    module=aocl/2.1.0
+    module=intel/19.0.5
+    module=mvapich2/2.3.2
+    appname=espresso
+    version=6.4-aocl
+[Command]
+    launcher=mpirun
+    launcherargs=-np $NPROCS -machinefile $MACHINEFILE
+    exe=pw.x
+    exeargs=-i ausurf.in > file.out
+    outputfile=time.output

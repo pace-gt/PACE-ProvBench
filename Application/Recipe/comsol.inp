@@ -1,0 +1,9 @@
+[Application]
+    appname=comsol
+    version=5.4
+[Command]
+    launcher=
+    launcherargs=
+    exe=comsol
+    exeargs=batch -tmpdir ./ -batchlog mybatch.log -np $NPROCS -f $MACHINEFILE -inputfile test.mph -outputfile testout.mph
+    outputfile=time.output

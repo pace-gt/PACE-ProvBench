@@ -1,0 +1,9 @@
+[Application]
+    appname=gpaw
+    version=19.8.1
+[Command]
+    launcher= python3
+    launcherargs=
+    exe=
+    exeargs= h2o_energies.py
+    outputfile=time.output

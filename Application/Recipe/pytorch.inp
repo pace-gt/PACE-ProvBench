@@ -1,0 +1,9 @@
+[Application]
+    appname=pytorch
+    version=1.4
+[Command]
+    launcher= python
+    launcherargs=
+    exe=main.py 
+    exeargs=--cuda --epochs 6
+    outputfile=time.output

@@ -1,0 +1,13 @@
+[Mode] # either interactive or queue
+    mode=interactive
+
+[Queue]
+    user=<user id>
+    queue=<queue name>
+    scheduler=<scheduler name>
+
+[Common]
+    nodes=1
+    ppn=32
+    runs=2
+    hostfile=./input.hosts

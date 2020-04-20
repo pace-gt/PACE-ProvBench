@@ -1,0 +1,141 @@
+ EPS  0.1300000      0.1300000      0.1300000    
+
+    WRITING FLOW FILE: ./flow_000.dat                                                                  
+
+
+    WRITING GRID FILE: ./grid.dat                                                                      
+
+
+
+ 1. GEOMETRY
+
+
+         IMAX = 128   JMAX = 128   KMAX = 128
+
+         XLEN = 12.566   YLEN = 12.566   ZLEN = 12.566
+
+
+ 2. FLOW PROPERTIES
+
+         UREF         =      10.00000
+         TREF         =       2.98000
+         PREF         =    1013.25000
+         RHOREF       =       1.17980
+         REYNOLDS NUM =    1000.00000
+
+
+ 3. NUMERICAL SCHEME
+
+         SPATIAL ORDER   = FOURTH ORDER
+         CFL             = 0.250
+         LES MODELING    = NONE: DNS
+
+
+ 4. SPECIES PROPERTIES
+
+         CHEMISTRY MODEL = NO CHEMISTRY: AIR FLOW
+ 
+ NEND FROM input.data :          200
+ NO RUNTIME SCREEN OUTPUT
+ FOR NPROCS =           20
+
+     TOTAL COMPUTER TIME  =  0:04:29
+     TIME PER STEP (SECS) =    1.34905
+
+
+     CPU TIME PER STEP PER CELL (SECS) =   1.3172E-05
+
+ EPS  0.1300000      0.1300000      0.1300000    
+
+    WRITING FLOW FILE: ./flow_000.dat                                                                  
+
+
+    WRITING GRID FILE: ./grid.dat                                                                      
+
+
+
+ 1. GEOMETRY
+
+
+         IMAX = 128   JMAX = 128   KMAX = 128
+
+         XLEN = 12.566   YLEN = 12.566   ZLEN = 12.566
+
+
+ 2. FLOW PROPERTIES
+
+         UREF         =      10.00000
+         TREF         =       2.98000
+         PREF         =    1013.25000
+         RHOREF       =       1.17980
+         REYNOLDS NUM =    1000.00000
+
+
+ 3. NUMERICAL SCHEME
+
+         SPATIAL ORDER   = FOURTH ORDER
+         CFL             = 0.250
+         LES MODELING    = NONE: DNS
+
+
+ 4. SPECIES PROPERTIES
+
+         CHEMISTRY MODEL = NO CHEMISTRY: AIR FLOW
+ 
+ NEND FROM input.data :          200
+ NO RUNTIME SCREEN OUTPUT
+ FOR NPROCS =           20
+
+     TOTAL COMPUTER TIME  =  0:04:32
+     TIME PER STEP (SECS) =    1.36207
+
+
+     CPU TIME PER STEP PER CELL (SECS) =   1.3299E-05
+
+ EPS  0.1300000      0.1300000      0.1300000    
+
+    WRITING FLOW FILE: ./flow_000.dat                                                                  
+
+
+    WRITING GRID FILE: ./grid.dat                                                                      
+
+
+
+ 1. GEOMETRY
+
+
+         IMAX = 128   JMAX = 128   KMAX = 128
+
+         XLEN = 12.566   YLEN = 12.566   ZLEN = 12.566
+
+
+ 2. FLOW PROPERTIES
+
+         UREF         =      10.00000
+         TREF         =       2.98000
+         PREF         =    1013.25000
+         RHOREF       =       1.17980
+         REYNOLDS NUM =    1000.00000
+
+
+ 3. NUMERICAL SCHEME
+
+         SPATIAL ORDER   = FOURTH ORDER
+         CFL             = 0.250
+         LES MODELING    = NONE: DNS
+
+
+ 4. SPECIES PROPERTIES
+
+         CHEMISTRY MODEL = NO CHEMISTRY: AIR FLOW
+ 
+ NEND FROM input.data :          200
+ NO RUNTIME SCREEN OUTPUT
+ FOR NPROCS =           20
+
+     TOTAL COMPUTER TIME  =  0:04:29
+     TIME PER STEP (SECS) =    1.34667
+
+
+     CPU TIME PER STEP PER CELL (SECS) =   1.3149E-05
+

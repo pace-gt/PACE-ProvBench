@@ -1,0 +1,32 @@
+#!/bin/bash
+#
+# script for submitting a parallel VASP 5.2 job
+#
+#PBS -q iw-shared-6 
+#PBS -j oe
+#PBS -N mpitest
+#PBS -o joe.$PBS_JOBID
+#PBS -l nodes=64
+#PBS -l mem=64GB
+#PBS -l walltime=1:00:00
+
+
+
+cd ${PBS_O_WORKDIR}
+module purge
+module load intel/15.0
+module load mvapich2/2.1
+module list
+#make
+cat ${PBS_NODEFILE}
+
+ulimit -s unlimited # remove limit on stack size
+ulimit -c unlimited
+unset MALLOC_PERTURB_
+export MALLOC_CHECK_=0
+
+NP=`wc -l < ${PBS_NODEFILE}`
+sed "s/CUBE/${NP}/g" input.tmp > input.data
+echo ${NP}
+echo "mpirun -np $NP ./les3d.x"
+mpirun -np ${NP} ./les3d.x

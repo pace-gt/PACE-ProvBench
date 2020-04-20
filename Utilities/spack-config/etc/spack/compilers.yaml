@@ -1,0 +1,46 @@
+compilers:
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: rhel7
+    paths:
+      cc: /usr/bin/gcc
+      cxx: /usr/bin/g++
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    spec: gcc@4.8.5
+    target: x86_64
+- compiler:
+    extra_rpaths:
+    flags:
+      cflags: -O2
+      cxxflags: -O2
+      fflags: -O2
+      fcflags: -O2
+    modules: []
+    operating_system: rhel7
+    paths:
+      cc: /storage/home/hcodaman1/AMDTest/PACE-ProvBench/Application/Spack/packages/linux-rhel7-x86_64/gcc-4.8.5/intel-parallel-studio-cluster.2019.3-3npq5qw6ri66bcpqgwzpeqjiqaddmlkl/compilers_and_libraries_2019.3.199/linux/bin/intel64/icc 
+      cxx: /storage/home/hcodaman1/AMDTest/PACE-ProvBench/Application/Spack/packages/linux-rhel7-x86_64/gcc-4.8.5/intel-parallel-studio-cluster.2019.3-3npq5qw6ri66bcpqgwzpeqjiqaddmlkl/compilers_and_libraries_2019.3.199/linux/bin/intel64/icpc 
+      f77: /storage/home/hcodaman1/AMDTest/PACE-ProvBench/Application/Spack/packages/linux-rhel7-x86_64/gcc-4.8.5/intel-parallel-studio-cluster.2019.3-3npq5qw6ri66bcpqgwzpeqjiqaddmlkl/compilers_and_libraries_2019.3.199/linux/bin/intel64/ifort 
+      fc: /storage/home/hcodaman1/AMDTest/PACE-ProvBench/Application/Spack/packages/linux-rhel7-x86_64/gcc-4.8.5/intel-parallel-studio-cluster.2019.3-3npq5qw6ri66bcpqgwzpeqjiqaddmlkl/compilers_and_libraries_2019.3.199/linux/bin/intel64/ifort
+    spec: intel@19.0.3
+    target: x86_64
+- compiler:
+    extra_rpaths:
+    flags:
+      cflags: -O2
+      cxxflags: -O2
+      fflags: -O2
+      fcflags: -O2
+    modules: []
+    operating_system: rhel7
+    paths:
+      cc: /storage/home/hcodaman1/AMDTest/PACE-ProvBench/Application/Spack/packages/linux-rhel7-x86_64/gcc-4.8.5/intel-parallel-studio-cluster.2019.3-3npq5qw6ri66bcpqgwzpeqjiqaddmlkl/compilers_and_libraries_2019.3.199/linux/bin/intel64/icc 
+      cxx: /storage/home/hcodaman1/AMDTest/PACE-ProvBench/Application/Spack/packages/linux-rhel7-x86_64/gcc-4.8.5/intel-parallel-studio-cluster.2019.3-3npq5qw6ri66bcpqgwzpeqjiqaddmlkl/compilers_and_libraries_2019.3.199/linux/bin/intel64/icpc
+      f77: /storage/home/hcodaman1/AMDTest/PACE-ProvBench/Application/Spack/packages/linux-rhel7-x86_64/gcc-4.8.5/intel-parallel-studio-cluster.2019.3-3npq5qw6ri66bcpqgwzpeqjiqaddmlkl/compilers_and_libraries_2019.3.199/linux/bin/intel64/ifort
+      fc: /storage/home/hcodaman1/AMDTest/PACE-ProvBench/Application/Spack/packages/linux-rhel7-x86_64/gcc-4.8.5/intel-parallel-studio-cluster.2019.3-3npq5qw6ri66bcpqgwzpeqjiqaddmlkl/compilers_and_libraries_2019.3.199/linux/bin/intel64/ifort
+    spec: intel@19.external
+    target: x86_64

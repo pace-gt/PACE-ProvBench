@@ -1,0 +1,9 @@
+[Application]
+    appname=mprime
+    version=29.4
+[Command]
+    launcher=
+    launcherargs=
+    exe=mprime
+    exeargs=-t
+    outputfile=time.output

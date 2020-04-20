@@ -1,0 +1,9 @@
+[Application]
+    appname=leslie-spec
+    version=21Feb19
+[Command]
+    launcher=mpirun
+    launcherargs=-np $NPROCS -machinefile $MACHINEFILE
+    exe=les3d.x
+    exeargs=
+    outputfile=time.output

@@ -1,0 +1,167 @@
+LAMMPS (16 Mar 2018)
+
+Large-scale Atomic/Molecular Massively Parallel Simulator - 16 Mar 2018
+
+Usage example: lmp -var t 300 -echo screen -in in.alloy
+
+List of command line options supported by this LAMMPS executable:
+
+-echo none/screen/log/both  : echoing of input script (-e)
+-help                       : print this help message (-h)
+-in filename                : read input from file, not stdin (-i)
+-kokkos on/off ...          : turn KOKKOS mode on or off (-k)
+-log none/filename          : where to send log output (-l)
+-nocite                     : disable writing log.cite file (-nc)
+-package style ...          : invoke package command (-pk)
+-partition size1 size2 ...  : assign partition sizes (-p)
+-plog basename              : basename for partition logs (-pl)
+-pscreen basename           : basename for partition screens (-ps)
+-restart rfile dfile ...    : convert restart to data file (-r)
+-reorder topology-specs     : processor reordering (-r)
+-screen none/filename       : where to send screen output (-sc)
+-suffix gpu/intel/opt/omp   : style suffix to apply (-sf)
+-var varname value          : set index style variable (-v)
+
+List of style options included in this LAMMPS executable
+
+* Atom styles:
+
+angle           atomic          body            bond            charge          
+dipole          ellipsoid       full            hybrid          line            
+molecular       peri            sphere          template        tri             
+
+* Integrate styles:
+
+respa           verlet          verlet/split    
+
+* Minimize styles:
+
+cg              fire            hftn            quickmin        sd              
+
+* Pair styles:
+
+adp             agni            airebo          airebo/morse    beck            
+bop             born            born/coul/dsf   born/coul/wolf  brownian        
+brownian/poly   buck            buck/coul/cut   buck/mdf        eam/cd          
+eam/cd/old      colloid         comb            comb3           coul/cut        
+coul/debye      coul/diel       coul/dsf        coul/streitz    coul/wolf       
+dpd             dpd/tstat       dsmc            eam             eam/alloy       
+eam/fs          edip            edip/multi      eim             extep           
+gauss           gauss/cut       gran/hertz/history              gran/hooke      
+gran/hooke/history              gw              gw/zbl          
+hbond/dreiding/lj               hbond/dreiding/morse            hybrid          
+hybrid/overlay  kolmogorov/crespi/z             lcbop           lennard/mdf     
+list            lj96/cut        lj/charmm/coul/charmm           
+lj/charmm/coul/charmm/implicit  lj/charmmfsw/coul/charmmfsh     lj/class2       
+lj/class2/coul/cut              lj/class2/coul/long             lj/cubic        
+lj/cut          lj/cut/coul/cut lj/cut/coul/debye               lj/cut/coul/dsf 
+lj/cut/coul/wolf                lj/cut/dipole/cut               
+lj/cut/dipole/long              lj/cut/tip4p/cut                lj/expand       
+lj/gromacs      lj/gromacs/coul/gromacs         lj/long/dipole/long             
+lj/mdf          lj/sf/dipole/sf lj/smooth       lj/smooth/linear                
+lj/sf           lubricate       lubricateU      lubricateU/poly lubricate/poly  
+meam            meam/spline     meam/sw/spline  mie/cut         momb            
+morse           morse/smooth/linear             nb3b/harmonic   nm/cut          
+nm/cut/coul/cut nm/cut/coul/long                peri/eps        peri/lps        
+peri/pmb        peri/ves        polymorphic     reax            reax/c          
+rebo            soft            srp             sw              table           
+tersoff         tersoff/mod     tersoff/mod/c   tersoff/table   tersoff/zbl     
+tip4p/cut       ufm             vashishta       vashishta/table yukawa          
+yukawa/colloid  zbl             zero            
+
+* Bond styles:
+
+class2          fene            fene/expand     gromos          harmonic        
+harmonic/shift  harmonic/shift/cut              hybrid          morse           
+nonlinear       quartic         table           zero            
+
+* Angle styles:
+
+charmm          class2          cosine          cosine/delta    cosine/periodic 
+cosine/shift    cosine/shift/exp                cosine/squared  dipole          
+fourier         fourier/simple  harmonic        hybrid          quartic         
+table           zero            
+
+* Dihedral styles:
+
+charmm          charmmfsw       class2          cosine/shift/exp                
+fourier         harmonic        helix           hybrid          multi/harmonic  
+nharmonic       opls            quadratic       spherical       table           
+zero            
+
+* Improper styles:
+
+class2          cossq           cvff            distance        fourier         
+harmonic        hybrid          ring            umbrella        zero            
+
+* KSpace styles:
+
+
+* Fix styles
+
+adapt           addforce        addtorque       atom/swap       ave/atom        
+ave/chunk       ave/correlate   ave/correlate/long              ave/histo       
+ave/histo/weight                ave/time        aveforce        balance         
+bond/break      bond/create     bond/swap       box/relax       cmap            
+controller      deform          deposit         ave/spatial     
+ave/spatial/sphere              drag            dt/reset        efield          
+ehex            enforce2d       evaporate       external        filter/corotate 
+flow/gauss      freeze          gcmc            gld             gle             
+gravity         grem            halt            heat            imd             
+indent          ipi             langevin        lineforce       momentum        
+move            neb             nph             nph/sphere      npt             
+npt/sphere      nve             nve/limit       nve/noforce     nve/sphere      
+nvk             nvt             nvt/sllod       nvt/sphere      oneway          
+orient/bcc      orient/fcc      pimd            planeforce      poems           
+pour            press/berendsen print           property/atom   qeq/comb        
+qeq/dynamic     qeq/fire        qeq/point       qeq/reax        qeq/shielded    
+qeq/slater      rattle          reax/bonds      reax/c/bonds    reax/c/species  
+recenter        restrain        rhok            rigid           rigid/nph       
+rigid/nph/small rigid/npt       rigid/npt/small rigid/nve       rigid/nve/small 
+rigid/nvt       rigid/nvt/small rigid/small     setforce        shake           
+smd             spring          spring/chunk    spring/rg       spring/self     
+store/force     store/state     temp/berendsen  temp/csld       temp/csvr       
+temp/rescale    tfmc            thermal/conductivity            ti/spring       
+tmd             ttm             ttm/mod         vector          viscosity       
+viscous         wall/colloid    wall/ees        wall/gran       wall/gran/region                
+wall/harmonic   wall/lj1043     wall/lj126      wall/lj93       wall/reflect    
+wall/region     wall/region/ees 
+
+* Compute styles:
+
+ackland/atom    aggregate/atom  angle           angle/local     angmom/chunk    
+basal/atom      bond            bond/local      centro/atom     chunk/atom      
+cluster/atom    cna/atom        cnp/atom        com             com/chunk       
+contact/atom    coord/atom      damage/atom     dihedral        dihedral/local  
+dilatation/atom dipole/chunk    displace/atom   erotate/rigid   erotate/sphere  
+erotate/sphere/atom             event/displace  fragment/atom   global/atom     
+group/group     gyration        gyration/chunk  heat/flux       hexorder/atom   
+improper        improper/local  inertia/chunk   ke              ke/atom         
+ke/rigid        msd             msd/chunk       msd/nongauss    omega/chunk     
+orientorder/atom                pair            pair/local      pe              
+pe/atom         plasticity/atom pressure        property/atom   property/chunk  
+property/local  rdf             reduce          reduce/region   rigid/local     
+slice           stress/atom     temp            temp/chunk      temp/com        
+temp/deform     temp/partial    temp/profile    temp/ramp       temp/region     
+temp/rotate     temp/sphere     ti              torque/chunk    vacf            
+vcm/chunk       
+
+* Region styles:
+
+block           cone            cylinder        intersect       plane           
+prism           sphere          union           
+
+* Dump styles:
+
+atom            cfg             custom          dcd             image           
+local           movie           xtc             xyz             
+
+* Command styles
+
+balance         change_box      create_atoms    create_bonds    create_box      
+delete_atoms    delete_bonds    displace_atoms  info            minimize        
+neb             prd             read_data       read_dump       read_restart    
+replicate       rerun           run             set             tad             
+temper          temper/grem     temper/npt      velocity        write_coeff     
+write_data      write_dump      write_restart   
+

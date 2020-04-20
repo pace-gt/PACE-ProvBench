@@ -1,0 +1,54 @@
+# -------------------------------------------------------------------------
+# This file controls default concretization preferences for Spack.
+#
+# Settings here are versioned with Spack and are intended to provide
+# sensible defaults out of the box. Spack maintainers should edit this
+# file to keep it current.
+#
+# Users can override these settings by editing the following files.
+#
+# Per-spack-instance settings (overrides defaults):
+#   $SPACK_ROOT/etc/spack/packages.yaml
+#
+# Per-user settings (overrides default and site settings):
+#   ~/.spack/packages.yaml
+# -------------------------------------------------------------------------
+packages:
+  openssl:
+      paths:
+          openssl@1.0.2k-fips: /usr
+      buildable: False
+  all:
+    compiler: [intel@19.0.3, gcc@8.3.0]
+    providers:
+      D: [ldc]
+      awk: [gawk]
+      blas: [openblas]
+      daal: [intel-daal]
+      elf: [elfutils]
+      fftw-api: [fftw]
+      gl: [mesa, opengl]
+      glu: [mesa-glu, openglu]
+      golang: [gcc]
+      ipp: [intel-ipp]
+      java: [jdk]
+      jpeg: [libjpeg-turbo, libjpeg]
+      lapack: [openblas]
+      mkl: [intel-mkl]
+      mpe: [mpe2]
+      mpi: [mvapich2, openmpi, mpich]
+      opencl: [pocl]
+      pil: [py-pillow]
+      pkgconfig: [pkgconf, pkg-config]
+      scalapack: [netlib-scalapack]
+      szip: [libszip, libaec]
+      tbb: [intel-tbb]
+      unwind: [libunwind]
+    permissions:
+      read: world
+      write: group
+      group: pace-software
+    # https://github.com/spack/spack/issues/13005#issuecomment-537586740
+    target: [x86_64]
+  mvapich2:
+    variants: fabrics=mrail file_systems=gpfs,nfs process_managers=hydra

@@ -1,0 +1,11 @@
+[Application]
+    module=pace/2020.01
+    module=gcc/8.3.0
+    appname=mash
+    version=2.2
+[Command]
+    launcher=
+    launcherargs=
+    exe=mash
+    exeargs= dist genome1.fna genome2.fna
+    outputfile=time.output

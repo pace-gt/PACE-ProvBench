@@ -1,0 +1,11 @@
+[Application]
+    module=pace/2020.01
+    module=gcc/8.3.0
+    appname=liggghts
+    version=3.8.0
+[Command]
+    launcher=mpirun
+    launcherargs=-np $NPROCS -machinefile $MACHINEFILE
+    exe=liggghts
+    exeargs=< in.chute_wear
+    outputfile=time.output

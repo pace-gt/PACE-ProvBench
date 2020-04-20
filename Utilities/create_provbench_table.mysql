@@ -1,0 +1,71 @@
+CREATE DATABASE provbench;
+USE provbench;
+CREATE TABLE Experiments (
+  exp_id        INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  mode          VARCHAR(32),
+  software_name         VARCHAR(64),
+  software_version      VARCHAR(32),
+  scheduler    VARCHAR(32),
+  username     VARCHAR(32),
+  queue        VARCHAR(32),
+  pbs_jobid    VARCHAR(64),
+  nruns        INT UNSIGNED DEFAULT 1,
+  total_nproc  INT UNSIGNED DEFAULT 0,
+  nodes        INT UNSIGNED DEFAULT 0,
+  ppns         MEDIUMTEXT,
+  ngpus        INT UNSIGNED DEFAULT 0,
+  script       MEDIUMTEXT,
+  experiment_location  TEXT,
+  md5          TEXT,
+  command      TEXT,
+  exit_status  INT,
+  avgage_time_seconds       DOUBLE(10,5),
+  maximum_time_seconds      DOUBLE(10,5),
+  minimum_time_seconds      DOUBLE(10,5),
+  standard_deviation      DOUBLE(8,5),
+  variance                DOUBLE(8,5),
+  exp_date                date,
+  exp_time                bigint(20),
+);
+
+CREATE TABLE Hosts (
+  host_id           INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  host_name         VARCHAR(64) NOT NULL,
+  bios_version      VARCHAR(64),
+  system_manufacturer      VARCHAR(64),
+  system_product_name      VARCHAR(64),
+  system_version           VARCHAR(64),
+  system_serial_number     VARCHAR(64),
+  system_uuid              VARCHAR(64),
+  processor_family         VARCHAR(64),
+  processor_version        VARCHAR(64),
+  processor_frequency      VARCHAR(64),
+  cpus          INT UNSIGNED DEFAULT 0,
+  sockets       INT UNSIGNED DEFAULT 0,
+  total_memory_gb     INT UNSIGNED DEFAULT 0,
+  ib_device           VARCHAR(32),
+  ib_rate       INT UNSIGNED DEFAULT 0,
+  gpu_info      TINYTEXT,
+  gpus          INT,
+  os_info       TINYTEXT,
+  kernel        TINYTEXT,
+  exp_id        INT,
+  CONSTRAINT fk_exp
+  FOREIGN KEY (exp_id) 
+    REFERENCES Experiments(exp_id)
+)
+
+CREATE TABLE Modules(
+  module_id     INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  module        VARCHAR(64) NOT NULL,
+  exp_id        INT,
+  CONSTRAINT fk_exp
+  FOREIGN KEY (exp_id) 
+    REFERENCES Experiments(exp_id)
+
+)
+
+GRANT INSERT,UPDATE,SELECT ON provbench.* TO 'provbench'@'localhost' IDENTIFIED BY '<password>';
+GRANT INSERT,UPDATE,SELECT ON provbench.* TO 'provbench'@'%.<local host domain>' IDENTIFIED BY '<password>';
+GRANT SELECT ON provbench.* TO 'webapp'@'localhost'; 
+GRANT SELECT ON provbench.* TO 'webapp'@'%.<local host domain>';  

@@ -1,0 +1,10 @@
+[Application]
+    module=pace/2020.01
+    appname=osu-micro-benchmarks
+    version=5.6.1-mva2
+[Command]
+    launcher=mpirun
+    launcherargs=-np $NPROCS -machinefile $MACHINEFILE
+    exe=osu_allgatherv
+    exeargs=-m 2:4240000 -f =i 500
+    outputfile=time.output

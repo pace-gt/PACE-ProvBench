@@ -1,0 +1,9 @@
+[Application]
+    appname=namd
+    version=2.13-multicore
+[Command]
+    launcher=charmrun
+    launcherargs=+p$NPROCS 
+    exe=namd2
+    exeargs=LipidA-min-01.conf
+    outputfile=time.output

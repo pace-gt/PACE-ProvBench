@@ -1,0 +1,9 @@
+[Application]
+    appname=ase
+    version=3.19.0
+[Command]
+    launcher= python3
+    launcherargs=
+    exe=
+    exeargs= eos_calc_constraints.py
+    outputfile=time.output

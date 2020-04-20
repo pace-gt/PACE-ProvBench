@@ -1,0 +1,4 @@
+----------------------------------------------------------------------------------------------------------------------------------
+Timestamp   |Application Name|     Version|      # runs|     # nodes|       # ppn|Average Run time (seconds)|Maximum Run time (seconds)|Minimum Run time (seconds)|Run time Stand-deviation|   Run time Variance|            Hostlist|Success (0)/Failed(1)|
+----------------------------------------------------------------------------------------------------------------------------------
+20200117_17_08_06| leslie-spec|     21Feb19|           2|           1|          24|             38.3935|              38.397|               38.39|              0.0035|1.2249999999992639e-05|['hostname']|   0

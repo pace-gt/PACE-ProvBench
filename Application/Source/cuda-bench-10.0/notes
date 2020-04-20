@@ -1,0 +1,4 @@
+Three test cases from cuda/10.0 samples folder
+0_Simple/matrixMulCUBLAS
+4_Finance/BlackScholes
+4_Finance/quasirandomGenerator

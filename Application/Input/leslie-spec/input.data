@@ -1,0 +1,29 @@
+PREFIX   NUNIT
+'./'     24
+IGMAX    JGMAX     KGMAX
+128     128      128
+RESTART  NEND      NREST    NFLOW    NSTAT   ITIME
+0        200       110000    1000       0        0
+PERT3D   COEF_AMP
+  1       1.0D-0
+XLEN     YLEN      ZLEN
+12.56637 12.56637 12.56637
+slref    eform     tpro
+0.28     0.0       1807.0
+uref     tref      pref     pexit    tstnd   relno    ALREF  NUREF
+10.00    2.98      1013.250  1013.250 0.0   1000.0     1.0    0.002
+idyn     iturb     ekref    URMS
+0        0         0.025    0.07
+cnuk     ce        cepsk    cprod
+0.067    1.0       0.916    1.0
+iprint   itpts     jtpts    ktpts
+0        2         2        2
+I-Coords of Trace Data Collection Points
+2 10
+J-Coords of Trace Data Collection Points
+2 4
+K-Coords of Trace Data Collection Points
+2 9
+SPNAME   CONC0     RMWT     CPK      HFK     LEWIS
+'O2'     0.50      32.00    1028.9   0.0     1.0
+'N2'     0.50      28.00    1095.8   0.0     1.0

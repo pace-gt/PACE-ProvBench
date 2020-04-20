@@ -1,0 +1,77 @@
+Compilation using the command make
+Removing the object files and the executable with the command 'make clean'
+(1) Changes in the Makefile
+    FC is the flag for the compiler
+    LINKER is the flag for the linking program
+    FOPTS is the flag for optimization.
+    Currenly, the flag, FOPTS is set as follows (for Intel Woodcrest)
+    FOPTS  = -ipo -O3 -xT
+    Make appropriate optimization changes
+
+(2) Rest of inputs are set in the file 'input.data'
+
+    IGMAX - Max. number of points in I direction "+1"
+    JGMAX - Max. number of points in J direction "+1"
+    KGMAX - Max. number of points in K direction "+1"
+    The actual domain size is (IGMAX-1)*(JGMAX-1)*KGMAX-1)!!
+    The processors distribution onto the computational domain
+    will be "more efficient" as (IGMAX-1), (JGMAX-1), (KGMAX-1) 
+    and the number of processors are powers of 2
+
+    NEND is the number of iterations to be performed only if ITIME
+    is set to 0. If ITIME is set to a non-zero, positive value,
+    then the code will determine automatically how long it needs
+    to run to complete the TML simulation based on the grid resolution
+    and the value of COEF_AMP. In that case, ITIME determines how
+    many times during the run there will be a small screen output
+    as well the computation of the timestep and the momentum thickness.
+    A value of 200 seems to have no influence on the timing of the code
+    while providing a smooth curve for the momentum thickness growth.
+    A value of 1 for COEF_AMP corresponds to the classical TML
+    initialization where the roll-up occurs relatively quickly.
+    If longer runs are required, the value of COEF_AMP should be decreased
+    accordingly. An estimate of the non-dimensional time required to
+    complete the TML is given by:
+    T = 80 - LOG10(COEF_AMP) * 40 
+    So going from 1 to 0.1 for COEF_AMP effectively increases the runtime
+    by 50%.
+    The variable PERT3D disables the 3D perturbation if set to 0.
+    The variable UREF should be left at 10.
+
+    In order to reproduce a run performed with the previous version
+    of this code, one needs to match the values of IGMAX, JGMAX, KGMAX
+    and NEND and to make sure ITIME is set to 0, COEF_AMP to 0 and
+    PERT3D to 0.
+
+    The remaining inputs are inconsequential currently.
+
+(3) The input for the number of processors is taken at the command
+    line when the user runs the code.
+
+    mpiexec -np 4 ./les3d.exe
+
+    The code picks up the number of processor (4, in this case) from the above line
+
+(4) The code outputs a normalized runtime, of the form:
+    TOTAL COMPUTER TIME  =  XXXXX
+    CPU TIME PER STEP PER CELL (SECS) =   YYYYYYYY
+    XXXXXX is the actual computation time, and YYYYYYY is the normalized 
+    run time, and is what will be used to assess
+    performance and scalability. The total run time might vary independently
+    from this quantity, and should be disregarded.
+
+(5) The approximate timing runtime can be roughly estimated as:
+    DOM = (IGMAX-1)*(JGMAX-1)*KGMAX-1)
+    RUNTIME = 4.D-6 * NEND * DOM / '# of procs'
+
+    To keep the runtime constant, one might want to double the number of iterations
+    (NEND) when doubling the number of processors or by changing the resolution
+    (IGMAX,JGMAX,KGMAX) = (129,129,129) is approximately the highest resolution for 2 procs
+    
+(6) Sample results are provided in the 'reference' directory. They provide
+    the momentum thickness evolution for various cases. One can check
+    that the file 'tml.dat' produced for a given run corresponds to a
+    similar temporal evolution than the ones already provided.
+    Additional output can be produced in the form of PLOT3D flow files,
+    but they require to uncomment some lines in the code. Please contact
+    us for this.

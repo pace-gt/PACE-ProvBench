@@ -1,0 +1,9 @@
+[Application]
+    appname=vasp
+    version=5.4.4
+[Command]
+    launcher=mpirun
+    launcherargs=-np $NPROCS -machinefile $MACHINEFILE
+    exe=vasp
+    exeargs=
+    outputfile=time.output

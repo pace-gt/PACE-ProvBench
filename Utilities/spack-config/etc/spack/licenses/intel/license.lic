@@ -1,0 +1,36 @@
+SERVER license.pace.gatech.edu 0050568B76B8 28518
+USE_SERVER
+#
+##SerialNumber=GTNG-BJH84X9X
+#
+#
+# A license is required to use package 'intel'.
+#
+# * If your system is already properly configured for such a license, save this
+#   file UNCHANGED. The system may be configured if:
+#
+#    - A license file is installed in a default location.
+#    - One of the following environment variable(s) is set for you, possibly via
+#      a module file:
+#
+#	INTEL_LICENSE_FILE
+#
+# * Otherwise, depending on the license you have, enter AT THE BEGINNING of
+#   this file:
+#
+#   - the contents of your license file, or
+#   - the address(es) of your license server.
+#
+#   After installation, the following symlink(s) will be added to point to
+#   this Spack-global file (relative to the installation prefix).
+#
+#	Licenses/license.lic
+#	/software/usr-local-pacerepov2/spack/0.12/spack/opt/spack/linux-rhel7-x86_64/gcc-8.2.0/intel-18.0.3-g7ck7ibqr3wr5pzqfxi5cveq54yxtfn2/compilers_and_libraries/linux/bin/intel64/license.lic
+#
+# * For further information on licensing, see:
+#
+#	https://software.intel.com/en-us/articles/intel-license-manager-faq
+#
+# Recap:
+# - You may not need to modify this file at all.
+# - Otherwise, enter your license or server address AT THE BEGINNING.

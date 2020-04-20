@@ -1,0 +1,10 @@
+[Application]
+    module=pace/2020.01
+    appname=psi4
+    version=1.3.2
+[Command]
+    launcher=
+    launcherargs=
+    exe=psi4
+    exeargs=input.dat -n$NPROCS
+    outputfile=time.output

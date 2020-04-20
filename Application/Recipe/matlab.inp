@@ -1,0 +1,10 @@
+[Application]
+    module=pace/2020.01
+    appname=matlab
+    version=r2019a
+[Command]
+    launcher=
+    launcherargs=
+    exe=matlab
+    exeargs=-nodisplay -singleCompThread -r "myParallelAlgorithmFcn($NPROCS);exit"
+    outputfile=time.output

@@ -1,0 +1,11 @@
+[Application]
+    module=pace/2020.01
+    module=gcc/8.3.0
+    appname=openfoam-org
+    version=5.0-mva2
+[Command]
+    launcher=bash
+    launcherargs=./runopenfoam.sh
+    exe=
+    exeargs=
+    outputfile=time.output

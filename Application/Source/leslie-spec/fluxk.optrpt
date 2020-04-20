@@ -1,0 +1,7 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 19.0.3.199 Build 20190206
+
+Compiler options: -I/storage/home/hcodaman1/AMDTest/PACE-ProvBench/Application/Spack/packages/linux-rhel7-x86_64/intel-19.0.3/mvapich2-2.3.1-e6yqogu77jjh63n5tsj3mljad5hvx5e6/include -I/storage/home/hcodaman1/AMDTest/PACE-ProvBench/Application/Spack/packages/linux-rhel7-x86_64/intel-19.0.3/mvapich2-2.3.1-e6yqogu77jjh63n5tsj3mljad5hvx5e6/include -Xlinker -rpath=/storage/home/hcodaman1/AMDTest/PACE-ProvBench/Application/Spack/packages/linux-rhel7-x86_64/gcc-4.8.5/intel-parallel-studio-cluster.2019.3-3npq5qw6ri66bcpqgwzpeqjiqaddmlkl/compilers_and_libraries_2019.3.199/linux/compiler/lib/intel64 -axCOMMON-AVX512 -O3 -qopt-report=5 -march=core-avx2 -fma -ftz -fomit-frame-pointer -ipo -no-prec-div -fp-model fast=2 -c
