@@ -21,7 +21,7 @@ Reach to Fang (Cherry) Liu (fang.liu@gatech.edu) if you have any questions.
   | - Images (stores all images used in this documentation)
   | - Design (includes the design documentation)
 ```
-
+Please check the detailed repo structure at [repo_directory_struc](repo_directory_struc.md)
 
 ## Checkout the repository
 
