@@ -1,0 +1,5 @@
+Test Lammps interactively on  4  nodes each with 28 cores
+
+real	19m3.717s
+user	0m1.394s
+sys	0m2.635s

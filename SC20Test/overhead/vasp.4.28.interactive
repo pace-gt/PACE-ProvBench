@@ -1,0 +1,5 @@
+Test vasp interactively on  4  nodes each with 28 cores
+
+real	2m12.146s
+user	0m0.996s
+sys	0m0.341s
