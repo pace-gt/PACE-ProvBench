@@ -18,6 +18,8 @@ Reach to Fang (Cherry) Liu (fang.liu@gatech.edu) if you have any questions.
   | - UnitTest (Test and query interface for users to invoking the tests and query the results)
   | - Test (Default test output place holder)
   | - SC20Test (includes all automation test scripts which generates the test result for the paper) 
+  | - Images (stores all images used in this documentation)
+  | - Design (includes the design documentation)
 ```
 
 
