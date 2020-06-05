@@ -87,7 +87,7 @@ class ExpInfo:
         runtime.constructNodefile()
 
         runtime.constructScript(self.appInfo)
-        print("In EXP before constructInput")
+        # print("In EXP before constructInput")
         runtime.constructInput(self.appInfo)
        
         mode = runtime.getMode()
@@ -108,20 +108,20 @@ class ExpInfo:
                 """
                 self.resultInfo.saveApp(self.appInfo)
             if mode == 'interactive':
-                print('run in node mode')
+                #print('run in node mode')
                 appName = self.appInfo.getAppName()
                 command = 'cd '+self.testDir+';bash run'+appName+'.sh'
-                print('run command '+command)
+                #print('run command '+command)
                 subprocess.call(command, shell=True)
 
 
 
             else:
-                print('run in queue mode')
+                #print('run in queue mode')
                 appName = self.appInfo.getAppName()
                 #command = 'ssh '+self.runtimeInfo.getScheduler()+ ' \"cd '+self.testDir+';qsub run'+appName+'.pbs\"'
                 command = 'cd '+self.testDir+';qsub -v SERVERHOST='+self.runtimeInfo.getScheduler()+' run'+appName+'.pbs'
-                print('run command '+command)
+                #print('run command '+command)
                 p = subprocess.run(command, shell=True, stdout=subprocess.PIPE)
                 result = p.stdout.decode()
                 #connectName=self.runtimeInfo.getUser()+'@'+self.runtimeInfo.getScheduler()
@@ -145,14 +145,16 @@ class ExpInfo:
                 #store the jobid in hosts field for later query
                 #runtimeInfo.setHosts(result)
                 #subprocess.call(command, shell=True)
-                time.sleep(60)
+                #time.sleep(60)
             
             if i == 0: 
                 """
                 log.out contains module list and md5 code
                 """
+                while not os.path.exists(self.testDir+"/log.out"):
+                    time.sleep(1)
                 output = utilities.parseLogInfo(self.testDir+"/log.out")
-                print(output)
+                #print(output)
                 if 'modules' in output.keys():
                     self.appInfo.setModules(output['modules'])
                     self.database.insertModule(self.appInfo.getModules())
@@ -184,7 +186,9 @@ class ExpInfo:
                     host2:ppn2
                     ...
                     """
-                    print("-------------set hostfile")
+                    #print("-------------set hostfile")
+                    while not os.path.exists(self.runtimeInfo.getAppTestDir()+'/machine.list'):
+                        sleep(1)
                     self.runtimeInfo.setHostfile(self.runtimeInfo.getAppTestDir()+'/machine.list') 
               
                 user = self.runtimeInfo.getUser()

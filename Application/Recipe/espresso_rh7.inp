@@ -1,0 +1,11 @@
+[Application]
+    module=intel/19.0
+    module=mvapich2/2.3
+    appname=espresso
+    version=6.4
+[Command]
+    launcher=mpirun 
+    launcherargs=-np $NPROCS -env MV2_USE_RDMA_CM=0 -machinefile $MACHINEFILE
+    exe=pw.x
+    exeargs=-i ausurf.in > file.out
+    outputfile=time.output

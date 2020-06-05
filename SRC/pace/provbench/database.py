@@ -40,7 +40,7 @@ class DataBase:
         self.updateExpSchema =  "(md5,script,experiment_location,command,exit_status,pbs_jobid,average_time_seconds,maximum_time_seconds,minimum_time_seconds,standard_deviation,variance)"               
         self.moduleSchema = "(module,exp_id)"
         self.expID = None
-        print("init database")
+        #print("init database")
 
     def connect(self):
         """
@@ -55,7 +55,7 @@ class DataBase:
             self.cursor = connection.cursor()
             if connection.is_connected():
                 db_info = connection.get_server_info()
-                print("Connected to MariaDB Server version ", db_info)
+                #print("Connected to MariaDB Server version ", db_info)
             return connection
 
         except Error as e:
@@ -78,12 +78,12 @@ class DataBase:
          e.g.("queue","leslie-spec","21Feb19","testflight-sched","fliu67","testflight","2","0","0")
         """
         sqlstatement = "INSERT INTO "+self.expTable+ " " +self.insertExpSchema + " VALUES "+ insertStr
-        print(sqlstatement)
+        #print(sqlstatement)
         self.cursor = self.db.cursor()
         try:
             self.cursor.execute(sqlstatement)
             self.expID = self.cursor.lastrowid 
-            print("expID is ",self.expID)
+            #print("expID is ",self.expID)
             self.db.commit()
         except Exception as e:
             print("Failed to insert an experiment",e)
@@ -97,7 +97,7 @@ class DataBase:
         :param value string type, input value
         """
         sqlstatement = "UPDATE "+ self.expTable + " SET "+column+"=\""+str(value)+"\" where exp_id=\""+str(self.expID)+"\""
-        print(sqlstatement)
+        #print(sqlstatement)
 
         self.cursor = self.db.cursor()
         try:
@@ -124,7 +124,7 @@ class DataBase:
 
         sqlstatement = "UPDATE "+ self.expTable + updateStr + " where exp_id=\""+str(self.expID)+"\""
         #sqlstatement = "INSERT INTO "+self.expTable+ " " +self.updateExpSchema + " VALUES "+ updateStr
-        print(sqlstatement)
+        #print(sqlstatement)
         self.cursor = self.db.cursor()
         try:
             self.cursor.execute(sqlstatement)
@@ -150,7 +150,7 @@ class DataBase:
 
         sqlstatement = "INSERT INTO "+self.moduleTable+ " " +self.moduleSchema + " VALUES "+insert
                         
-        print(sqlstatement)
+        #print(sqlstatement)
         self.cursor = self.db.cursor()
         try:
             self.cursor.execute(sqlstatement)
@@ -175,7 +175,7 @@ class DataBase:
 
         insert_str = "("+hostinfo+" ,"+str(self.expID)+")"
         sqlstatement = "INSERT INTO " + self.hostTable + " " + self.hostSchema + " VALUES "+insert_str
-        print(sqlstatement)
+        #print(sqlstatement)
         try:
             self.cursor.execute(sqlstatement)
             self.db.commit()
@@ -240,7 +240,7 @@ class DataBase:
 
 
 
-        print(sqlstatement)
+        #print(sqlstatement)
         try:
             self.cursor.execute(sqlstatement)
             result = self.cursor.fetchall()

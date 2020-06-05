@@ -1,0 +1,15 @@
+[Mode] # either interactive or queue
+    #mode=queue
+    mode=interactive
+
+[Queue]
+    user=fliu67
+    queue=testflight-coda
+    scheduler=sched-testflight-coda
+
+[Common]
+    nodes=4
+    ppn=40
+    runs=5
+    hostfile=./input.hosts
+#    roottestdir=/nv/hp16/fliu67/coda-home/PACE-ProvBench-with-db/PACE-ProvBench/UnitTest

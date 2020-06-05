@@ -79,7 +79,7 @@ class RuntimeInfo:
 			and all fields are cast into correct data type to class data members
         """
 
-        print("read conf file from ", input_runtime) 
+        #print("read conf file from ", input_runtime) 
 
         self.myvars = utilities.parseFile(input_runtime,'=')
 
@@ -94,7 +94,7 @@ class RuntimeInfo:
         if 'ppn' in self.myvars.keys():
             for x in range(self.nodes):
                 self.ppns.append(self.myvars['ppn'][0])
-            print("read from ppns conf ",self.ppns)
+            #print("read from ppns conf ",self.ppns)
         if 'runs' in self.myvars.keys():
             self.runs = self.myvars['runs'][0].strip()
         if 'hostfile' in self.myvars.keys():
@@ -130,15 +130,15 @@ class RuntimeInfo:
             for line in file:
                 host,ppn = line.strip().partition(':')[::2]
                 self.myvars['hosts'].append(host)
-                print(len(self.ppns))
+                #print(len(self.ppns))
                 if ppn != None:
                     self.ppns[i] = ppn
                     i += 1 
             file.close()
 	    # this data member store list of hosts
             self.hosts = self.myvars['hosts']
-            print("After reading from input.hosts")
-            print(self.ppns)
+            #print("After reading from input.hosts")
+            #print(self.ppns)
 
 
     def constructMachineList(self):
@@ -150,7 +150,7 @@ class RuntimeInfo:
         """
         mode = self.mode
         if mode == self.modeList[0]: #interactive mode
-            print(self.myvars['hosts'])
+            #print(self.myvars['hosts'])
             outfile = open(self.appTestDir+'/machine.list', 'w')
             index=0
             for m in self.myvars['hosts']:
@@ -242,11 +242,11 @@ class RuntimeInfo:
         self.testDate = mdate
         self.testTime = mtime
         self.timeStamp = timeStamp
-        print(self.rootTestDir)
-        print(self.user)
-        print(self.nodes)
-        print(self.ppns)
-        print(timeStamp)
+        #print(self.rootTestDir)
+        #print(self.user)
+        #print(self.nodes)
+        #print(self.ppns)
+        #print(timeStamp)
         if self.mode == self.modeList[0]: # interactive mode
             dirPath = self.rootTestDir+'/'+self.user+'-'+self.getFirstHost()+'-'+str(self.nodes)+'-'+str(self.ppns[0])+'-'+timeStamp
         else:
@@ -271,7 +271,7 @@ class RuntimeInfo:
         appname =  appinfo.getAppName()
         if mode == self.modeList[1]:#queue mode
 
-            print('construct a queue script')
+            #print('construct a queue script')
             self.scriptFile = self.appTestDir + '/run'+appname+'.pbs'
             
             scriptfile = open(self.scriptFile, 'w')
@@ -280,7 +280,7 @@ class RuntimeInfo:
                 scriptfile.write('#PBS -l nodes='+str(self.nodes)+':ppn=1:gpus=1\n')
             else:
                 scriptfile.write('#PBS -l nodes='+str(self.nodes)+':ppn='+str(self.ppns[0])+'\n')
-            scriptfile.write('#PBS -l walltime=1:00:00 \n')
+            scriptfile.write('#PBS -l walltime=4:00:00 \n')
             scriptfile.write('#PBS -q '+self.queue+'\n')
             scriptfile.write('#PBS -j oe \n')
             scriptfile.write('#PBS -o '+appinfo.getAppName()+'.output.$PBS_JOBID\n')
@@ -364,9 +364,9 @@ class RuntimeInfo:
             self.hosts.append(host)             
             
             if ppn != None:                    
-                print("ppn------------------------"+ppn)
+                #print("ppn------------------------"+ppn)
                 self.ppns.append(ppn)            
-                print(self.ppns)
+                #print(self.ppns)
                 nproc += int(ppn)
                 i += 1                     
         self.nprocs=nproc
@@ -406,7 +406,7 @@ class RuntimeInfo:
         return self.ppns
 
     def setPPNs(self, ppn):
-        print("overwrite ppn as "+str(ppn))
+        #print("overwrite ppn as "+str(ppn))
         if len(self.ppns) < self.nodes:
             exit("Command line specified number of nodes must be smalled than what's in input.runtime")
         for m in range(self.nodes):

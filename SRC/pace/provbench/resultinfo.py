@@ -37,7 +37,7 @@ class ResultInfo:
 
     def parseResult(self,testdir,database):
         resultfile = open(testdir+'/summary.result', 'a')
-        print(self.app)
+        #print(self.app)
         # update columns in Experiments table
         # (md5,total_nproc,script,experiment_location,command,exit_status,pbs_jobid,average_time_seconds,maximum_time_seconds,minimum_time_seconds,standard_deviation,variance)
         expUpdateSchema=["total_nproc",
@@ -58,7 +58,7 @@ class ResultInfo:
         outresult = [self.header]
         mode = self.runtime.getMode()
 
-        print("---------------- mode"+mode)
+        #print("---------------- mode"+mode)
         for m in self.app:
             time_stamp = self.runtime.getTimeStamp()
             appname = str(m.getAppName())
@@ -109,11 +109,11 @@ class ResultInfo:
 
             database.batchUpdateExperiment(expUpdateSchema,valueToDB)
  
-            print(temp_result)
+            #print(temp_result)
             outresult.append(temp_result)
             time.sleep(30)
 
-        print(outresult)
+        #print(outresult)
         utilities.formatResult(outresult,resultfile)
 
         resultfile.close()
@@ -167,13 +167,13 @@ class ResultInfo:
             # output format is (b'62m17.822s\n62m13.330s\n', None)
 			# convert the bytes to string
             output = process.communicate()[0].decode("utf-8")
-            print(output)
+            #print(output)
             # conver to list ['62m17.822s', '62m13.330s', '']
             run_time = output.split('\n')
-            print(run_time)
+            #print(run_time)
             # remove the last element ['62m17.822s', '62m13.330s']
             run_time =  run_time[:len(run_time)-1]
-            print(len(run_time))
+            #print(len(run_time))
             # sum all tests in run time
             sum_time = 0
             for each_time in run_time:

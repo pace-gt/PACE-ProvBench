@@ -1,0 +1,11 @@
+[Application]
+    module=intel/19.0
+    module=mvapich2/2.3
+    appname=lammps
+    version=9Jan20
+[Command]
+    launcher=mpirun
+    launcherargs=-np $NPROCS -machinefile $MACHINEFILE
+    exe=lmp
+    exeargs=< in.chute
+    outputfile=time.output

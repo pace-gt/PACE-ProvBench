@@ -1,0 +1,9 @@
+[Application]
+    appname=dgemm
+    version=2020.04.30
+[Command]
+    launcher=
+    launcherargs=
+    exe=seq_cblas_dgemm
+    exeargs=--numiters 10 -n 2000
+    outputfile=time.output

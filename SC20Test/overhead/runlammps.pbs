@@ -1,0 +1,26 @@
+#This is a generated script
+#PBS -l walltime=2:00:00 
+#PBS -q testflight-coda
+#PBS -j oe 
+#PBS -o lammps.output.$PBS_JOBID
+cd $PBS_O_WORKDIR 
+module load intel/19.0.5
+module load mvapich2/2.3.2
+module load lammps/09Jan20
+modulecount=`module -t list 2>&1|wc -l`
+MACHINEFILE=$PBS_NODEFILE
+NPROCS=`wc -l < ${PBS_NODEFILE}`
+
+for i in {1..5};do
+tempdir=run$i-lammps-$NPROCS+`date +%Y-%m-%d_%H_%M`
+mkdir $tempdir 
+cd $tempdir 
+cp -r $PBS_O_WORKDIR/../../Application/Input/lammps/* .
+EXE=`which lmp`>> log.out
+echo $EXE>>log.out
+ldd $EXE >>log.out
+echo md5 >>log.out
+echo `which lmp|xargs md5sum|cut -d " " -f1` >>log.out
+(time mpirun -np $NPROCS -machinefile $MACHINEFILE lmp < in.chute) 2>&1| tee -a time.output
+echo "Running success(0)/failed(1) "${PIPESTATUS[0]} >>log.out
+cd ../ ;done

@@ -13,7 +13,7 @@ def isFileExist(filename):
     except IOError as e:
         print('I/O error({0}:{1})'.format(e.errno, e.strerror))
         print(filename + " doesn't exist")
-        exit(1)
+        exit(2)
     return file
 
 # parseFile: function to parse a key<delim>value per line file
@@ -280,12 +280,12 @@ def processQueryResult(queryResult, header):
     df_hm = df.groupby(df['exp_id']).agg({'host_name':lambda tdf: tdf.unique().tolist(),\
                                         'module':lambda tdf: tdf.unique().tolist(),\
                                         'software_name':lambda tdf: tdf.unique().tolist()})
-    print(df_hm)
+    #print(df_hm)
     # remove duplicated rows due to multiple hosts and modules
     df_new = df.drop(['host_name','module','software_name'], axis=1)
     df_new = df_new.drop_duplicates()
     #print(df_new)
     # combine the aggregated host and module with rest of output fields 
     df_result = pd.merge(df_hm, df_new, how='left', on = 'exp_id')
-    print(df_result)
+    #print(df_result)
     return df_result

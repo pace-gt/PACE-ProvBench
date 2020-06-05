@@ -1,0 +1,9 @@
+[Application]
+    appname=stream
+    version=20141028
+[Command]
+    launcher=
+    launcherargs=
+    exe=stream_c
+    exeargs=
+    outputfile=time.output

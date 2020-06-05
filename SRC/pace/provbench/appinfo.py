@@ -40,7 +40,8 @@ class AppInfo:
         self.inputDir = None
         self.exe = None
         self.modulePath = None
-        self.benchRoot = utilities.getBenchRootDir()
+        #self.benchRoot = utilities.getBenchRootDir()
+        self.benchRoot = utilities.getRepoRootDir()
         self.command = command.Command()
         self.modules = None
     
@@ -63,7 +64,7 @@ class AppInfo:
             self.version = self.myvars['version'][0].strip()
         if 'inputdir' in self.myvars.keys():
             self.inputDir = self.myvars['inputdir'][0].strip()
-            print(self.inputDir)
+            #print(self.inputDir)
         else:
             self.inputDir = self.getInputDir()
 
@@ -124,7 +125,7 @@ class AppInfo:
         
         :return a format string ready to be put in the run script
         """
-        print(self.myvars['module'])
+        #print(self.myvars['module'])
         rstr = 'source '+self.benchRoot+'/Utilities/bench_init.sh\n'
         #rstr +='module purge\n'
         for m in self.myvars['module']:

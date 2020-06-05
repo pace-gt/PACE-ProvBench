@@ -59,7 +59,8 @@ class SysInfo:
                 error = ssh.stderr.readlines()
                 print("ERROR: %s" % error)
         else:
-                print(result)
+                #print(result)
+                print("Get system info successfully")
 
 
         outfile.write(result[0].decode("utf-8"))

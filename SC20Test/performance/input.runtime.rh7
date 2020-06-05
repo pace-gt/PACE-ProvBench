@@ -1,0 +1,13 @@
+[Mode] # either interactive or queue
+    mode=queue
+
+[Queue]
+    user=fliu67
+    queue=pace-ice
+    scheduler=pace-ice-sched
+
+[Common]
+    nodes=4
+    ppn=28
+    runs=5
+    hostfile=./input.hosts.rh7
