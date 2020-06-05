@@ -1,0 +1,5 @@
+Test lammps by provbench interactively on   nodes each with 28 cores
+
+real	18m18.984s
+user	0m3.040s
+sys	0m2.406s

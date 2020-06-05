@@ -1,0 +1,5 @@
+Test vasp by provbench interactively on   nodes each with 28 cores
+
+real	67m13.150s
+user	0m2.819s
+sys	0m4.631s
