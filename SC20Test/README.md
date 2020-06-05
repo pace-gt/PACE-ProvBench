@@ -15,6 +15,8 @@ performcne - this folder includes test scripts for both Casecade Lake and Broadw
   | - input.runtime.rh7 is the runtime configuration for script rh7test.sh
   | - <app>.<node>.<ppn>.coda files are the output in queue mode
   | - <app>.<node>.<ppn>.interactive files are the output in interactive mode
+  | - casecadelake.env script genenated env capturing for Casecade Lake system
+  | - broadwell.env script genenated env capturing for Broadwell system
 ```
 
 - overhead folder is used to run the test without using PACE-ProvBench, there are two modes for this test, 
