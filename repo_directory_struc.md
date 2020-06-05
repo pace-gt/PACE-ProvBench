@@ -68,3 +68,9 @@ Utilities
   | -  get_sysinfo.sh (called by SRC/pace/provbench/sysinfo.py to collect the system information)
   | -  spack-config (includes all spack related configuration to create the software stack for testing suite, check README.md to find the details)
   ```
+### SC20Test: all automation test scripts and test results
+```
+SC20Test
+    | - performance(performance test scripts and results)
+    | - overhead (overhead test scripts and results)
+```
