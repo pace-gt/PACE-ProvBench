@@ -1,6 +1,6 @@
 [Mode] # either interactive or queue
-    #mode=queue
-    mode=interactive
+    mode=queue
+    #mode=interactive
 
 [Queue]
     user=fliu67
