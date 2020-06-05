@@ -28,3 +28,43 @@ overhead
   | - hosts.<nodes> are files for interactive run scripts and serves as the machinefile for mpirun
   | -  <app>.<node>.<ppn>.interactive files are the output in interactive mode
 ```
+## Run the test
+Before running the test, be sure all applications are correctly installed and can be loaded by modulel load. 
+All application input are included in <PACE-ProvBench>/Application/Input. You may need to update the application
+recipe under <PACE-ProvBench>/Application/Recipe, and change the test scripts accordingly if you want to use 
+the different name for the recipes. 
+  
+- To run the performance test in queue mode for Casecade Lake system:
+```
+cd performance
+../../Utilities/bench_init_withoutspack.sh
+./codatest.sh
+```
+- To run the peformation test in interactive mode for Casecade Lake system, update input.hosts with the host you
+want to run test on:
+```
+cd performance
+../../Utilities/bench_init_withoutspack.sh
+./codatest-interactive.sh
+```
+
+- To run the performance test in queue mode for Broadwell system:
+```
+cd performance
+../../Utilities/bench_init_withoutspack.sh
+./rh7test.sh
+```
+
+- To run the overhead test for non-provbench in queue mode
+```
+cd overhead
+../../Utilities/bench_init_withoutspack.sh
+./run.sh
+```
+
+- To run the overhead test for non-provbench in interactive mod
+```
+cd overhead
+../../Utilities/bench_init_withoutspack.sh
+for i in 1 2 4; do ./run-interactive.sh $i `pwd`;done
+```
