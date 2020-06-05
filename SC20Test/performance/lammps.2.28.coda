@@ -1,0 +1,36 @@
+Running tests
+Specifying application lammps_intel
+Specifying input file ./input.runtime.coda
+Specifying number of nodes for testing
+Specifying number of cores per node for testing
+Successfully created the directory /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-2-28-20200604_07_33_16
+Successfully created the directory /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-2-28-20200604_07_33_16/lammps
+Successfully copied from /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/Application/Input/lammps to /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-2-28-20200604_07_33_16/lammps
+qsub -------------------2463.sched-testflight-coda.pace.gatech.edu
+
+
+Get system info successfully
+Get system info successfully
+362.616
+Close the database connection
+
+real	30m57.657s
+user	2m54.238s
+sys	9m47.936s
+Running tests
+Specifying application lammps_intel
+Specifying input file ./input.runtime.coda
+Specifying number of nodes for testing
+Specifying number of cores per node for testing
+Successfully created the directory /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-2-28-20200604_15_14_24
+Successfully created the directory /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-2-28-20200604_15_14_24/lammps
+Successfully copied from /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/Application/Input/lammps to /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-2-28-20200604_15_14_24/lammps
+qsub -------------------2476.sched-testflight-coda.pace.gatech.edu
+
+
+363.781
+Close the database connection
+
+real	30m51.747s
+user	2m24.463s
+sys	10m30.259s

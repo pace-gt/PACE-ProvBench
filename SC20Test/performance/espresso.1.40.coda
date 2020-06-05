@@ -1,0 +1,32 @@
+Running tests
+Specifying application espresso
+Specifying input file ./input.runtime.coda
+Specifying number of nodes for testing
+Specifying number of cores per node for testing
+Successfully created the directory /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-1-40-20200603_17_10_53
+Successfully created the directory /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-1-40-20200603_17_10_53/espresso
+Successfully copied from /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/Application/Input/espresso to /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-1-40-20200603_17_10_53/espresso
+qsub -------------------2440.sched-testflight-coda.pace.gatech.edu
+
+
+Get system info successfully
+503.704
+Close the database connection
+Running tests
+Specifying application espresso
+Specifying input file ./input.runtime.coda
+Specifying number of nodes for testing
+Specifying number of cores per node for testing
+Successfully created the directory /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-1-40-20200604_15_18_24
+Successfully created the directory /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-1-40-20200604_15_18_24/espresso
+Successfully copied from /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/Application/Input/espresso to /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-1-40-20200604_15_18_24/espresso
+qsub -------------------2484.sched-testflight-coda.pace.gatech.edu
+
+
+Get system info successfully
+486.381
+Close the database connection
+
+real	102m44.810s
+user	9m35.974s
+sys	38m18.194s

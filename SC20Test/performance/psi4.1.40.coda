@@ -1,0 +1,32 @@
+Running tests
+Specifying application psi4
+Specifying input file ./input.runtime.coda
+Specifying number of nodes for testing
+Specifying number of cores per node for testing
+Successfully created the directory /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-1-40-20200603_17_06_53
+Successfully created the directory /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-1-40-20200603_17_06_53/psi4
+Successfully copied from /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/Application/Input/psi4 to /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-1-40-20200603_17_06_53/psi4
+qsub -------------------2432.sched-testflight-coda.pace.gatech.edu
+
+
+Get system info successfully
+900.001
+Close the database connection
+Running tests
+Specifying application psi4
+Specifying input file ./input.runtime.coda
+Specifying number of nodes for testing
+Specifying number of cores per node for testing
+Successfully created the directory /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-1-40-20200604_15_19_24
+Successfully created the directory /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-1-40-20200604_15_19_24/psi4
+Successfully copied from /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/Application/Input/psi4 to /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-1-40-20200604_15_19_24/psi4
+qsub -------------------2486.sched-testflight-coda.pace.gatech.edu
+
+
+Get system info successfully
+931.449
+Close the database connection
+
+real	150m5.225s
+user	17m8.497s
+sys	69m58.956s

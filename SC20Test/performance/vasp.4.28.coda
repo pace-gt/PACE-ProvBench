@@ -1,0 +1,31 @@
+Running tests
+Specifying application vasp
+Specifying input file ./input.runtime.coda
+Specifying number of nodes for testing
+Specifying number of cores per node for testing
+Successfully created the directory /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-4-28-20200603_17_09_53
+Successfully created the directory /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-4-28-20200603_17_09_53/vasp
+Successfully copied from /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/Application/Input/vasp to /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-4-28-20200603_17_09_53/vasp
+qsub -------------------2438.sched-testflight-coda.pace.gatech.edu
+
+
+Get system info successfully
+Get system info successfully
+Get system info successfully
+Get system info successfully
+27.09
+Close the database connection
+Running tests
+Specifying application vasp
+Specifying input file ./input.runtime.coda
+Specifying number of nodes for testing
+Specifying number of cores per node for testing
+Successfully created the directory /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-4-28-20200604_15_16_24
+Successfully created the directory /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-4-28-20200604_15_16_24/vasp
+Successfully copied from /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/Application/Input/vasp to /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-4-28-20200604_15_16_24/vasp
+qsub -------------------2480.sched-testflight-coda.pace.gatech.edu
+
+
+real	124m14.342s
+user	0m0.814s
+sys	0m0.205s

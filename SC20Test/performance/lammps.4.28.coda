@@ -1,0 +1,42 @@
+Running tests
+Specifying application lammps_intel
+Specifying input file ./input.runtime.coda
+Specifying number of nodes for testing
+Specifying number of cores per node for testing
+Successfully created the directory /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-4-28-20200603_23_47_08
+Successfully created the directory /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-4-28-20200603_23_47_08/lammps
+Successfully copied from /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/Application/Input/lammps to /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-4-28-20200603_23_47_08/lammps
+qsub -------------------2462.sched-testflight-coda.pace.gatech.edu
+
+
+Get system info successfully
+Get system info successfully
+Get system info successfully
+Get system info successfully
+231.19400000000002
+Close the database connection
+
+real	20m8.296s
+user	0m21.694s
+sys	1m51.745s
+Running tests
+Specifying application lammps_intel
+Specifying input file ./input.runtime.coda
+Specifying number of nodes for testing
+Specifying number of cores per node for testing
+Successfully created the directory /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-4-28-20200604_15_15_54
+Successfully created the directory /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-4-28-20200604_15_15_54/lammps
+Successfully copied from /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/Application/Input/lammps to /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-4-28-20200604_15_15_54/lammps
+qsub -------------------2479.sched-testflight-coda.pace.gatech.edu
+
+
+Get system info successfully
+Get system info successfully
+Get system info successfully
+Get system info successfully
+226.269
+Close the database connection
+
+real	53m42.295s
+user	0m18.984s
+sys	1m15.370s

@@ -1,0 +1,40 @@
+Running tests
+Specifying application vasp
+Specifying input file ./input.runtime.coda
+Specifying number of nodes for testing
+Specifying number of cores per node for testing
+Successfully created the directory /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-2-28-20200603_17_09_23
+Successfully created the directory /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-2-28-20200603_17_09_23/vasp
+Successfully copied from /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/Application/Input/vasp to /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-2-28-20200603_17_09_23/vasp
+qsub -------------------2437.sched-testflight-coda.pace.gatech.edu
+
+
+Traceback (most recent call last):
+  File "../../UnitTest/runtest.py", line 61, in <module>
+    main()
+  File "../../UnitTest/runtest.py", line 52, in main
+    exp.runExp()
+  File "/storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SRC/pace/provbench/expinfo.py", line 156, in runExp
+    output = utilities.parseLogInfo(self.testDir+"/log.out")
+  File "/storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SRC/pace/provbench/utilities.py", line 195, in parseLogInfo
+    var = next(file)
+StopIteration
+Running tests
+Specifying application vasp
+Specifying input file ./input.runtime.coda
+Specifying number of nodes for testing
+Specifying number of cores per node for testing
+Successfully created the directory /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-2-28-20200604_15_14_54
+Successfully created the directory /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-2-28-20200604_15_14_54/vasp
+Successfully copied from /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/Application/Input/vasp to /storage/coda1/pace-admins/fliu67/Project/local/PACE-ProvBench/SC20Test/Test/fliu67-testflight-coda-2-28-20200604_15_14_54/vasp
+qsub -------------------2477.sched-testflight-coda.pace.gatech.edu
+
+
+Get system info successfully
+Get system info successfully
+396.576
+Close the database connection
+
+real	33m36.439s
+user	7m50.221s
+sys	22m3.539s
