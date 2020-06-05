@@ -1,4 +1,4 @@
-# PACE-ProBench
+# PACE-ProvBench
 
 PACE-ProvBench is a Platform independent tool to quickly setup test suite/environment for usability and performance test on any new machines,
 and it provides an easy way to compare the performance across multiple systems. When tests are running, all runtime
@@ -8,6 +8,18 @@ presents a clearer high-level representation, which aims to make the benchmark t
 meantime the testing provenance is captured. 
 
 Reach to Fang (Cherry) Liu (fang.liu@gatech.edu) if you have any questions.
+
+# Repo Structure
+```
+<PACE-ProvBench Root Dir> 
+  | - Application  (includes all application related data, build scripts, input data, recipe and module files/installation placeholder)
+  | - Utitilies (include all automation bash scripts, either is used in python code, or for building Spack software tool chaim, or used as bootstraping)
+  | - SRC (The main source code for ProvBench, all python codes)
+  | - UnitTest (Test and query interface for users to invoking the tests and query the results)
+  | - Test (Default test output place holder)
+  | - SC20Test (includes all automation test scripts which generates the test result for the paper) 
+```
+
 
 ## Checkout the repository
 
