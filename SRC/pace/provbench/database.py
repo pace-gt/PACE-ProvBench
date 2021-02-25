@@ -50,7 +50,7 @@ class DataBase:
         try:
             connection = mysql.connector.connect(host="pbstools-coda.pace.gatech.edu",    # your host, usually localhost
                      user="provbench",         # your username
-                     passwd="PACE-CODA!9",  # your password
+                     passwd="xxxxxxx",  # your password
                      db="provbench")        # name of the data base
             self.cursor = connection.cursor()
             if connection.is_connected():
